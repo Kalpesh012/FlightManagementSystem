@@ -1,0 +1,60 @@
+<br>
+<button type="button" class="buttons" (click)="back()"><i class="fa-solid fa-arrow-left fa-2xl" style="color: #ffc857;"></i></button>
+<div class="card mx-auto">
+    <div class="form">
+        <h1>Flight Detail</h1>
+        <p><b> Flight Code: </b> {{particularFlight.flightCode}} </p>
+        <p><b> Flight Name: </b> {{particularFlight.flightName}} </p>
+        <p><b> Source: </b> {{particularFlight.source}} </p>
+        <p><b> Destination: </b> {{particularFlight.destination}} </p>
+        <p><b> Ticket Fare: </b> {{particularFlight.ticketCost}} </p>
+        <p><b> Flight Rating: </b> {{particularFlight.flightRating}} </p>
+        <p><b> Commercial Flight: </b> {{particularFlight.isCommercial}} </p>
+        <p><b> Capacity : </b> {{particularFlight.capacity}} </p>
+        <p><b> Seats Available : </b> {{particularFlight.availableSeats}} </p>
+
+    </div>
+    <div class="button" style="background-color: #323031;">
+        <button type="button" class="btn" (click)="booking(particularFlight.recordNumber)" >Book Now</button>
+    </div>
+    <div class="new-button">
+        <table>
+            <tr>
+                <td>
+                    <input type="checkbox" id="click">
+                    <label for="click" class="click-me">Company Info.</label>
+                    <div class="content">
+                        <div class="text">
+                            Company Information
+                        </div>
+                        <label for="click" id="temp">x</label>
+    
+                        <form>
+                            <p> <b>Company Name:</b> {{particularCompany.companyName}}</p>
+                            <p> <b>Company Ceo Name:</b> {{particularCompany.companyOwnerName}}</p>
+                            <p> <b>Years of Service:</b> {{particularCompany.yearsOfService}}</p>
+                            <p> <b>Founded Year:</b> {{particularCompany.establishedYear}}</p>
+                        </form>
+                    </div>
+                </td>
+                <td></td>
+                <td>
+                    <input type="checkbox" id="click-1">
+                    <label for="click-1" class="click-me-1">Airport Info.</label>
+                        <div class="content-1">
+                            <div class="text-1">
+                                Airport Information
+                            </div>
+                            <label for="click-1" id="temp-1">x</label>
+            
+                            <form>
+                                <p> <b>Airport Name:</b> {{particularAirport.airportName}} </p>
+                                <p> <b>City Name:</b> {{particularAirport.cityName}} </p>
+                                <p> <b>Country Name:</b> {{particularAirport.countryName}} </p>
+                            </form>
+                        </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

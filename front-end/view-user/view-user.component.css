@@ -1,0 +1,74 @@
+.card{
+  width: 35%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 10px 25px 10px;
+  color: #ffc857;
+  background-color: #323031;
+}
+
+.w3-button{
+  width: 120px;
+  border: 2px solid #ffc857;
+  background-color: #177e89;
+  border-radius: 2rem;
+  margin-top: 10px;
+}
+
+.w3-button-1{
+  width: 45px;
+  border: 2px solid #ffc857;
+  background-color: #177e89;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.w3-container{
+  background-color: #323031;
+  color: #ffc857;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table{
+  align-items: center;
+  text-align: center;
+  background-color: #177e89;
+  color: #ffc857;
+}
+  
+tr{
+  text-align: center;
+}
+
+th{
+  text-align: center;
+
+}
+
+tr:hover {
+  background-color: #084c61;
+}
+
+.button{
+  display: flex;
+  float: right;
+  width: 100px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  background-color: #323031;
+}
+
+.w3-button:hover {
+  background-color: #084c61;
+}
+
+.w3-button-1:hover {
+  background-color: #084c61;
+}

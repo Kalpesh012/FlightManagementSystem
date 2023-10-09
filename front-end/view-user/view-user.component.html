@@ -1,0 +1,47 @@
+<link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<button type="button" class="button" (click)="back()" *ngIf="adminLogin()"><i class="fa-solid fa-arrow-left fa-2xl" style="color: #ffc857;" *ngIf="adminLogin()"></i></button>
+<div class="card mx-auto">
+    <div>
+        <p><b>User Name:</b> {{user.userName}}</p>
+        <p><b>User Email:</b> {{user.userEmail}}</p>
+        <p><b>Date of Birth:</b> {{user.dob | date:'yyyy/MM/dd'}}</p>
+        <p><b>About User:</b> {{user.about}}</p>
+    </div>
+    <div>
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button" *ngIf="bookings.length !== 0">bookings</button>
+        <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-animate-zoom w3-card-4">
+              <header class="w3-container"> 
+                <span onclick="document.getElementById('id01').style.display='none'" 
+                class="w3-button-1 w3-display-topright">&times;</span>
+                <h2>User Bookings</h2>
+              </header>
+              <div class="w3-container">
+                <table class="table">
+                    <tr>
+                        <th>Source</th>
+                        <th>Destination</th>
+                        <th>Booking Date</th>
+                        <th>Journey Date</th>
+                        <th>Number of Seats Booked</th>
+                        <th>Grand Cost</th>
+                    </tr>
+                    <tr *ngFor = "let booking of bookings | paginate: { itemsPerPage: count, currentPage: p }">
+                        <td>{{booking.source}}</td>
+                        <td>{{booking.destination}}</td>
+                        <td>{{booking.bookingDate | date:'yyyy/MM/dd'}}</td>
+                        <td>{{booking.journeyDate | date:'yyyy/MM/dd'}}</td>
+                        <td>{{booking.seatsBooked}}</td>
+                        <td>{{booking.bookingCost}}</td>
+                    </tr>
+                </table>
+                <div class="text-center" style="color: #ffc857; display: flex;">
+                  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+              </div>
+             
+            </div>
+    </div>
+</div>

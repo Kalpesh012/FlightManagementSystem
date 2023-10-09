@@ -1,0 +1,60 @@
+<div class="navbar navbar-primary navbar-dark">
+  <a  routerLinkActive="active" id="navbar-brand" ><img src="assets/loogoo.png" width="130px" height="70px"></a>
+  <div class="UserAndAdmin">
+    <button *ngIf="userService.isUserLoggedIn() && adminLogin()">Admin</button>
+    <button *ngIf="userService.isUserLoggedIn() && userLogin()">User</button>
+  </div>
+  <div class="dropdown" *ngIf="userService.isUserLoggedIn()">
+    <button class="dropbtn">Flight Service</button>
+    <div class="dropdown-content">
+      <a *ngIf="userService.isUserLoggedIn()" routerLink="see-all-flights"  routerLinkActive="active" class="nav-link" >Flight List</a>
+      <a *ngIf="userService.isUserLoggedIn() && adminLogin() " routerLink="create-flight" routerLinkActive="active" class="nav-link">Add New Flight</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn" *ngIf="userService.isUserLoggedIn() && adminLogin()">Company Service</button>
+    <div class="dropdown-content">
+      <a *ngIf="userService.isUserLoggedIn()" routerLink="see-all-company"  routerLinkActive="active" class="nav-link" >Company List</a>
+      <a *ngIf="userService.isUserLoggedIn()" routerLink="create-company" routerLinkActive="active" class="nav-link" >Add New Company</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn" *ngIf="userService.isUserLoggedIn() && adminLogin()">Airport Service</button>
+    <div class="dropdown-content">
+      <a *ngIf="userService.isUserLoggedIn()" routerLink="see-all-airport"  routerLinkActive="active" class="nav-link" >Airport List</a>
+      <a *ngIf="userService.isUserLoggedIn()" routerLink="create-airport" routerLinkActive="active" class="nav-link" >Add New Airport</a>
+    </div>
+  </div>
+  <a *ngIf="userService.isUserLoggedIn() && userLogin()" routerLinkActive="active" (click)="viewUser()">
+    <span class="nav-item" >User Details</span>
+  </a>
+  <a *ngIf="userService.isUserLoggedIn() && adminLogin()" routerLinkActive="active" class="nav-link" routerLink="see-all-bookings">
+    <span class="nav-item" >Booking Service</span>
+  </a>
+  <a *ngIf="userService.isUserLoggedIn() && adminLogin()" routerLinkActive="active" class="nav-link" routerLink="see-all-users" >
+    <span class="nav-item" >User Service</span>
+  </a>
+  <a *ngIf="userService.isUserLoggedIn() && userLogin()" routerLinkActive="active" id="userAbout" routerLink="about-us">
+    <span class="nav-item" >About Us</span>
+  </a>
+  <a *ngIf="userService.isUserLoggedIn() && adminLogin()" routerLinkActive="active" class="nav-link" routerLink="about-us">
+    <span class="nav-item" >About Us</span>
+  </a>
+  <a *ngIf="userService.isUserLoggedIn() && adminLogin()" routerLinkActive="active" class="nav-link" routerLink="see-all-feedbacks">
+    <span class="nav-item" >Feedback Service</span>
+  </a>
+  <a *ngIf="userService.isUserLoggedIn()" routerLinkActive="active" class="nav-link" >
+    <i class="fas fa-sign-out-alt" ></i>
+    <span class="nav-item" (click)="logout()">Logout</span>
+  </a>
+  <a *ngIf="!userService.isUserLoggedIn()" routerLink="/signin" routerLinkActive="active" class="nav-link">
+    <i class="fas fa-door-open"></i>
+    <span class="nav-item">Login</span>
+  </a>
+</div>
+
+<br>
+<h1 class="text-center" style="color: #ffc857; font-family:Arial, Helvetica, sans-serif;"> {{title}} </h1>
+<div class = "container">
+  <router-outlet></router-outlet>
+</div>

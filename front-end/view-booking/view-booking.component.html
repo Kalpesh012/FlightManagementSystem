@@ -1,0 +1,9 @@
+<button type="button" class="button" (click)="back()"><i class="fa-solid fa-arrow-left fa-2xl" style="color: #ffc857;"></i></button>
+<div class="card mx-auto">
+    <p><b> Source: </b> {{particularBooking.source}}</p>
+    <p><b> Destination: </b> {{particularBooking.destination}}</p>
+    <p><b> Booking Date: </b> {{particularBooking.bookingDate | date:'yyyy-MM-dd'}}</p>
+    <p><b> Journey Date: </b> {{particularBooking.journeyDate | date:'yyyy-MM-dd'}}</p>
+    <p><b> Seats Booked: </b> {{particularBooking.seatsBooked}}</p>
+    <p><b> Total Fare: </b> {{particularBooking.bookingCost}}</p>
+</div>
