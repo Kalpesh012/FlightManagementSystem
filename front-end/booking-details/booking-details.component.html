@@ -1,0 +1,71 @@
+<div class="card mx-auto">
+    <table>
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td align="right">
+                    <label>
+                        <b> Source   </b>
+                    </label>
+                </td>
+                <td >
+                    :{{particularBooking.source}}
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>
+                        <b> Destination </b>
+                    </label>
+                </td>
+                <td >
+                    :{{particularBooking.destination}}
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label >
+                        <b> Booking Date </b>
+                    </label>
+                </td>
+                <td >
+                    :{{particularBooking.bookingDate | date:'yyyy-MM-dd'}}
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label >
+                        <b> Journey Date </b>
+                    </label>
+                </td>
+                <td >
+                    :{{particularBooking.journeyDate | date:'yyyy-MM-dd'}}
+                </td>
+            </tr>
+            <tr>
+                <td >
+                    <label>
+                        <b> Number of Seats Booked </b>
+                    </label>
+                </td>
+                <td >
+                    :{{particularBooking.seatsBooked}}
+                </td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label>
+                        <b> Grand Cost </b>
+                    </label>
+                </td>
+                <td >
+                    :{{particularBooking.bookingCost}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="message">
+        <p><em>An E-mail have also been send to your email.</em></p>
+    </div>
+    <button type="button" class="button" (click)="back()">Ok</button>
+</div>

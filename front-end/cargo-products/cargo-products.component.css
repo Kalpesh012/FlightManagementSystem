@@ -1,0 +1,13 @@
+.cargo{
+    background-color: #323031;
+    color: #ffc857;
+    padding: 15px 35px 15px 35px;
+    margin: 5px;
+    margin-bottom: 50px;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

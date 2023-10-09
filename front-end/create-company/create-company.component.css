@@ -1,0 +1,32 @@
+.container-form{
+    width: auto;
+    height: 450px;
+}
+.card{
+    width: 450px;
+    height: 500px;
+    border-radius: 2rem;
+    color: #ffc857;
+    background-color: #323031;
+}
+
+.btn {
+    display: flex;
+    float: right;
+}
+.button{
+    display: flex;
+    float: right;
+    width: 100px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    background-color: #323031;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #ffc857;
+}

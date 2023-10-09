@@ -1,0 +1,20 @@
+.card{
+    width: 380px;
+    height: 400px;
+    display: flex;
+    color: #ffc857;
+    background-color: #323031;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.button{
+    display: flex;
+    float: right;
+    width: 100px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    background-color: #323031;
+}

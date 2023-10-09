@@ -1,0 +1,36 @@
+
+<div class="card mx-auto" >
+    <h2>Fill the Booking Information</h2>
+    <table>
+        <tr>
+            <td> Journey Date: </td>
+            <td>
+                <input type="date" [(ngModel)] = "booking.journeyDate" style="width: 150px;height: 30px;border-radius: 2rem;" #journeyDate>
+            </td>
+        </tr>
+        <tr>
+            <td> Number of Seats: </td>
+            <td>
+                <input type="number" [(ngModel)] = "booking.seatsBooked" min="1" style="width: 150px;height: 30px;border-radius: 2rem;" #seatsBooked>
+            </td>
+        </tr>
+        <tr>
+            <td *ngIf="adminLogin()"> User </td>
+            <td let i = index>
+                <select name="User" id="user" [(ngModel)]="selectedUserIds[i]" style="width: 150px;height: 30px;border-radius: 2rem;" *ngIf="adminLogin()">
+                    <option value="select-user">Select User</option>
+                    <option *ngFor="let user of users" [value]="user.userId">
+                        {{user.userName}}
+                    </option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> Otp Validation </td>
+            <td> <input type="text" style="width: 150px;height: 30px;border-radius: 2rem;" #enteredOtp></td>
+        </tr>
+    </table>
+    <div class="button">
+        <button type="submit" class="btn" (click)="bookingTicket(selectedUserIds[i], enteredOtp.value)">Submit</button>
+    </div>
+</div>

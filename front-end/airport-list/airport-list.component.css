@@ -1,0 +1,16 @@
+.table{
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+
+  .table tr:hover {
+    background-color: #177e89;
+    color: #ffc857;
+   }
+
+   h3{
+    color: #ffc857;
+    display: flex;
+    justify-content: center;
+   }

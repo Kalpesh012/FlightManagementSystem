@@ -1,0 +1,111 @@
+.button {
+    float: right;
+    padding: 15px 15px;
+    margin: 4px;
+    color: #ffc857;
+    background-color: #323031;
+}
+
+.button :hover{
+  background-color: #323031;
+  color: #ffc857;
+}
+
+.dropbtn {
+    background-color: #323031;
+    color: #ffc857;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    width: 120px;
+    height: 50px;
+  }
+  
+  .dropdown {
+    width: 100px;
+    height: 30px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #323031;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #ffc857;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #177e89;color: #ffc857;}
+
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #177e89; color: #ffc857;}
+
+  .button:hover {background-color: #177e89; color: #ffc857;}
+
+  .dropbtn-1 {
+    background-color: #323031;
+    color: #ffc857;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    width: 150px;
+    height: 50px;
+  }
+  
+  .dropdown-1 {
+    width: 300px;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+  }
+  
+  .dropdown-content-1 {
+    display: none;
+    position: absolute;
+    background-color: #323031;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content-1 a {
+    color: #ffc857;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content-1 a:hover {background-color: #177e89;color: #ffc857;}
+
+  .dropdown-1:hover .dropdown-content-1 {display: block;}
+  
+  .dropdown-1:hover .dropbtn-1 {background-color: #177e89; color: #ffc857;}
+
+  .table{
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+ .buttons{
+  text-align: right;
+ }
+
+ .table tr:hover {
+  background-color: #177e89;
+  color: #ffc857;
+ }

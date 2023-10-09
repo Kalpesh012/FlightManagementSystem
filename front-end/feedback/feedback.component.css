@@ -1,0 +1,27 @@
+.card{
+    width: 450px;
+    height: 400px;
+    background-color: #323031;
+    color: #ffc857;
+}
+
+select{
+    width: 245px;
+    height: 35px;
+    margin: 5px;
+}
+
+table{
+    margin: 30px;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    float: right;
+    background-color: #323031;
+    color: #ffc857;
+    border: 1px solid #ffc857;
+    margin-right: 40px;
+    border-radius: 2rem;
+}

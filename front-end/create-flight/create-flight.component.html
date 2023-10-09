@@ -1,0 +1,75 @@
+    <br>
+    <button type="button" class="button" (click)="back()"><i class="fa-solid fa-arrow-left fa-2xl" style="color: #ffc857;"></i></button>
+    <div class="card mx-auto">
+        <br>
+        <div class="container">
+            <form class="container-form" >
+                <h3 style="display: flex; text-align: center;">Please Fill New Flight Information</h3>
+            
+                <div class="form-group">
+                    <label> Flight Code</label>
+                    <input type="text" class ="form-control" id = "flightCode"
+                        [(ngModel)] = "flight.flightCode" name = "flightCode">
+                </div>
+                
+                <div class="form-group">
+                    <label> Source </label>
+                    <input type="text" class ="form-control" id = "source"
+                        [(ngModel)] = "flight.source" name = "source">
+                </div>
+                
+                 <div class="form-group">
+                    <label> Destination </label>
+                    <input type="text" class ="form-control" id = "destination"
+                        [(ngModel)] = "flight.destination" name = "destination">
+                </div>
+                
+                 <div class="form-group">
+                    <label> Rating </label>
+                    <input type="text" class ="form-control" id = "flightRating"
+                        [(ngModel)] = "flight.flightRating" name = "flightRating">
+                </div>
+                
+                 <div class="form-group">
+                    <label> Fare </label>
+                    <input type="text" class ="form-control" id = "ticketCost"
+                        [(ngModel)] = "flight.ticketCost" name = "ticketCost">
+                </div>
+        
+                <div class="form-group">
+                    <label> Capacity </label>
+                    <input type="text" class ="form-control" id = "capacity"
+                        [(ngModel)] = "flight.capacity" name = "capacity">
+                </div>
+                
+                <div class="form-check">
+                    <label>Type Of flight:</label><br>
+                       <input class="form-check-input" type="radio" name = "isCommercial"
+                           [(ngModel)]="flight.isCommercial" value="true" />
+                       <label class="form-check-label">Commercial Flight</label><br>
+                       <input class="form-check-input" type="radio" name = "isCommercial"
+                           [(ngModel)]="flight.isCommercial" value="false"/>
+                       <label class="form-check-label">Non Commercial Flight</label>
+                </div>
+                <div>
+                    <label>Select an Airport</label>
+                    <select name="Airport" id="airport" [(ngModel)]="selectedAirportsIds[i]">
+                        <option *ngFor="let airport of airports"  [value]="airport.airportId">
+                            {{airport.airportName}}
+                        </option>
+                    </select>
+                </div>
+                <div>
+                    <label>Select an Company</label>
+                    <select name="Company" id="company"  [(ngModel)]="selectedCompanysIds[j]">
+                        <option *ngFor="let company of companys"  [value]="company.companyId">
+                            {{company.companyName}}
+                        </option>
+                    </select>
+                </div>
+                   <br>
+                <button class = "btn btn-success" type ="submit" (click)="saveFlight(selectedAirportsIds[i],selectedCompanysIds[j])">Submit</button>
+            </form>
+            <br>
+        </div>
+      </div>

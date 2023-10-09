@@ -1,0 +1,27 @@
+<table class="table">
+    <tr >
+      <th > User Name </th> 
+      <th > User Password </th>
+      <th > User Email </th>
+      <th > User Date of Birth </th>
+      <th > About User </th>
+      <th > Actions </th>
+  </tr>
+  <tr  *ngFor = "let user of users | paginate: { itemsPerPage: count, currentPage: p }" >
+    <td > {{ user.userName }} </td>
+    <td > {{ user.userPassword }} </td>
+    <td > {{ user.userEmail }} </td>
+    <td > {{ user.dob | date:'yyyy/MM/dd'}} </td>
+    <td > {{ user.about }} </td>
+    <td >
+        <button (click) = "deleteUser(user.userId)" class = "btn btn-danger" style="margin-left: 10px">
+          <i class="fa-regular fa-trash-can fa-flip" style="color: crimson;"></i> Delete </button>
+        <button (click) = "viewUser(user.userId)" class = "btn btn-info" style="margin-left: 10px">
+          <i class="fa-solid fa-eye fa-bounce" style="color: cornflowerblue;"></i> View </button> 
+    </td>
+  </tr>
+  </table>
+
+  <div class="text-center" style="color: #ffc857">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>

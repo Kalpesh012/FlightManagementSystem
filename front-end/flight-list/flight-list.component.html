@@ -1,0 +1,83 @@
+
+<div class="list row">
+
+<table>
+  <tr>
+    <td>
+      <div class="dropdown">
+        <button class="dropbtn">Sort By</button>
+          <div class="dropdown-content">
+            <a (click)="sorting('costLow')">Cost <i class="fa-solid fa-arrow-up-wide-short fa-beat" ></i></a>
+            <a (click)="sorting('costHigh')">Cost <i class="fa-solid fa-arrow-down-wide-short fa-beat"></i></a>
+            <a (click)="sorting('ratingLow')">Rating <i class="fa-solid fa-arrow-down-wide-short fa-beat"></i></a>
+            <a (click)="sorting('ratingHigh')">Rating <i class="fa-solid fa-arrow-up-wide-short fa-beat"></i></a>
+          </div>
+      </div>
+    </td>
+    <td>
+      <div class="input-group mb-3" >
+        <input type="text" class="form-control" placeholder="Search by flight name" 
+          [(ngModel)]="flightName" style="margin-left: 30%;width: 350px;height: 50px;margin-top: 25px;"/>
+        <div class="input-group-append" >
+          <button
+            class="btn btn-outline-secondary" type="button"(click)="searchByFlightName()" style="margin-top: 25px;">
+              <i class="fa-solid fa-magnifying-glass fa-beat" ></i>
+          </button>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="dropdown-1">
+        <button class="dropbtn-1">Type of Flight</button>
+          <div class="dropdown-content-1">
+            <a (click)="getCommercialFlights()">Commercial Flights</a>
+            <a (click)="getNonCommercialFlights()">Non Commercial Flights</a>
+          </div>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<br><br>
+<h2 style="color: #ffc857; display: flex; justify-content: center;"> Flight List </h2>
+<table class="table">
+  <tr >
+    <th > Flight Name </th> 
+    <th > Flight Code </th>
+    <th > Source </th>
+    <th > Destination </th>
+    <th > Capacity </th>
+    <th > Ticket Cost </th>
+    <th > Ratings </th>
+    <th> Seats Available</th>
+    <th > Actions </th>
+  </tr>
+  <tr  *ngFor = "let flight of flights | paginate: { itemsPerPage: count, currentPage: p }" >
+    <td > {{ flight.flightName }} </td>
+    <td > {{ flight.flightCode }} </td>
+    <td > {{ flight.source }} </td>
+    <td > {{ flight.destination }} </td>
+    <td > {{ flight.capacity }} </td>
+    <td > {{ flight.ticketCost }} </td>
+    <td > {{ flight.flightRating }} </td>
+    <td > {{ flight.availableSeats}} </td>
+    <td >
+      <button (click) = "updateFlight(flight.recordNumber)" class = "btn btn-info" *ngIf="adminLogin()" >
+        <i class="fa-regular fa-pen-to-square fa-beat-fade" style="color: cornflowerblue;"></i> Update </button>
+      <button (click) = "deleteFlight(flight.recordNumber)" class = "btn btn-danger" *ngIf="adminLogin()" style="margin-left: 10px">
+        <i class="fa-regular fa-trash-can fa-flip" style="color: crimson;"></i> Delete </button>
+      <button (click) = "viewflight(flight.recordNumber)" class = "btn btn-info" style="margin-left: 10px">
+        <i class="fa-solid fa-eye fa-bounce" style="color: cornflowerblue;"></i> View </button> 
+    </td>
+  </tr>
+</table>
+
+<div class="buttons" *ngIf="flights.length !== 0">
+  <button class="m-3 btn btn-sm btn-danger"  (click)="removeAllFlights()" *ngIf="adminLogin()">
+    Remove All
+  </button>
+</div>
+
+<div class="text-center" style="color: #ffc857">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

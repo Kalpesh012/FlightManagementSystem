@@ -1,0 +1,9 @@
+.card{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #323031;
+    color: #ffc857;
+    padding: 15px 35px 15px 35px;
+}

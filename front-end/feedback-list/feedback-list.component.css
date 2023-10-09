@@ -1,0 +1,30 @@
+.table{
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+    tr{
+      text-align: center;
+    }
+  
+    th{
+      text-align: center;
+    }
+  
+    .table tr:hover {
+      background-color: #177e89;
+      color: #ffc857;
+     }
+  
+     .buttons{
+      text-align: right;
+      padding: 3px;
+     }
+  
+     h3{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: #ffc857;
+  }

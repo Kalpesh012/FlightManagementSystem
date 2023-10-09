@@ -1,0 +1,58 @@
+<br>
+
+<button type="button" class="button" (click)="back()"><i class="fa-solid fa-arrow-left fa-2xl" style="color: #ffc857;"></i></button>
+
+<div class="card mx-auto">
+<br>  
+    <div class="col">
+        <h3> Update Flight </h3>
+        <form (ngSubmit) = "onSubmit()">
+        
+            <div class="form-group">
+                <label> Flight Name </label>
+                <input type="text" class ="form-control" id = "flightName"
+                    [(ngModel)] = "flight.flightName" name = "flightName">
+            </div>
+        
+            <div class="form-group">
+                <label> Flight Code </label>
+                <input type="text" class ="form-control" id = "flightCode"
+                    [(ngModel)] = "flight.flightCode" name = "flightCode">
+            </div>
+            <div class="form-group">
+                <label> Source </label>
+                <input type="text" class ="form-control" id = "source"
+                    [(ngModel)] = "flight.source" name = "source">
+            </div>
+            
+            <div class="form-group">
+                <label> Destination </label>
+                <input type="text" class ="form-control" id = "destination"
+                    [(ngModel)] = "flight.destination" name = "destination">
+            </div>
+            
+            <div class="form-group">
+                <label> Rating </label>
+                <input type="text" class ="form-control" id = "flightRating"
+                    [(ngModel)] = "flight.flightRating" name = "flightRating">
+            </div>
+            
+            <div class="form-group">
+                <label> Fare </label>
+                <input type="text" class ="form-control" id = "ticketCost"
+                    [(ngModel)] = "flight.ticketCost" name = "ticketCost">
+            </div>
+    
+            <div class="form-group">
+                <label> Capacity </label>
+                <input type="text" class ="form-control" id = "capacity"
+                    [(ngModel)] = "flight.capacity" name = "capacity">
+            </div>
+            <div class="text-right">
+                <button class = "btn btn-success" type ="submit" style="padding: 15px 25px;"
+                >Submit</button>
+            </div>
+            <br>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="card mx-auto">
+  <div class="form">
+    <div class="form-group">
+      <h2>Fill the Form Please</h2>
+    </div>
+    <div class="form-group">
+      <label for="user">Username</label>
+        <div class="form-control">
+          <input type="text" id="user" name="username" placeholder="Enter Username" #userName>
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="dob">Date of Birth</label>
+        <div class="form-control">
+          <input type="date" id="dob" name="dob" #dob>
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+        <div class="form-control">
+          <input type="email" id="email" name="email" placeholder="Enter E-mail" #email>
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="pass">Password</label>
+        <div class="form-control">
+          <input type="password" id="pass" name="pass" placeholder="Enter Password" #password>
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Repeat Password</label>
+        <div class="form-control">
+          <input type="password" id="password" name="password" placeholder="Retype the Password" #repassword>
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="about">About</label>
+        <div class="form-control">
+          <input type="textarea" id="about" name="about" placeholder="Enter Something About You" #about>
+        </div>
+    </div>
+    <div class="form-group">
+      <button class="btn" type="submit" (click)="saveUser(userName.value, dob.value, email.value, password.value, repassword.value, about.value)">
+        Sign Up
+      </button>
+    </div>
+  </div>
+</div>

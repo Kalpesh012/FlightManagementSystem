@@ -1,0 +1,33 @@
+<br>
+<button type="button" class="button" (click)="back()"><i class="fa-solid fa-arrow-left fa-2xl" style="color: #ffc857;"></i></button>
+    <div class="card mx-auto">
+        <br>
+        <div class="container">
+            <form class="container-form" (ngSubmit) = "onSubmit()">
+                <h3>Please Fill the New Company Information</h3>
+                <div class="form-group">
+                    <div class="form-group">
+                        <label > Company Name </label>
+                        <input type="text" class="form-control" id="companyName"
+                        [(ngModel)] = "company.companyName" name = "companyName" placeholder="Enter Company Name">
+                    </div>
+                    <div class="form-group">
+                        <label > Company CEO Name </label>
+                        <input type="text" class="form-control" id="companyOwnerName"
+                        [(ngModel)] = "company.companyOwnerName" name = "companyOwnerName" placeholder="Enter CEO Name">
+                    </div>
+                    <div class="form-group">
+                        <label > Years of Service </label>
+                        <input type="text" class="form-control" id="yearsOfService"
+                        [(ngModel)] = "company.yearsOfService" name = "yearsOfService" placeholder="Enter the Years Of Service">
+                    </div>
+                    <div class="form-group" >
+                        <label > Founded in the Year </label>
+                        <input type="text" class="form-control" id="establishedYear"
+                        [(ngModel)] = "company.establishedYear" name = "establishedYear" placeholder="Enter Founded Yesr">
+                    </div>
+                </div>
+                <button class = "btn btn-success" type ="submit">Submit</button>
+            </form>
+        </div>
+      </div>

@@ -1,0 +1,33 @@
+.card{
+    width: 350px;
+    height: 300px;
+    background-color: #323031;
+    color: #ffc857;
+    border-radius: 2rem;
+}
+
+table{
+    margin: 10px;
+}
+
+td{
+    padding: 5px;
+}
+
+h2{
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn{
+    border: 1px solid #ffc857;
+    color: #ffc857;
+    float: right;
+    margin: 10px;
+    border-radius: 2rem;
+    width: 100px;
+    height: 45px;
+}
+

@@ -1,0 +1,27 @@
+.card{
+    width: 40%;
+    height: auto;
+    background-color: #323031;
+    color: #ffc857;
+    justify-content: center;
+    border-radius: 2rem;
+}
+
+input{
+    border-radius: 2rem;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+}
+
+.button{
+    display: flex;
+    float: right;
+    width: 100px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    background-color: #323031;
+}

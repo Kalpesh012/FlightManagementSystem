@@ -1,0 +1,51 @@
+<div class="remove-bar">
+    <table class="table-remove">
+        <tr>
+            <td>
+                <input type="date" [(ngModel)]="startDate"
+                style="margin-right: 10px;height: 40px;border: 3px solid #ffc857;border-radius: 2rem;">
+            </td>
+            <td><i class="fa-solid fa-arrow-right-arrow-left fa-flip" style="color: #ffc857
+            ;"></i></td>
+            <td>
+                <input type="date" [(ngModel)]="endDate"
+                style="margin-left: 5px;height: 40px;border: 3px solid #ffc857;border-radius: 2rem;">
+            </td>
+            <td>
+                <button type="submit" class="submit-button" (click)="removeBookings()"
+                >Submit</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+        <h3>Booking List</h3>
+        <table class="table">
+            <tr>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Booking Date</th>
+                <th>Journey Date</th>
+                <th>Number of Seats Booked</th>
+                <th>Grand Cost</th>
+                <th>Actions</th>
+            </tr>
+            <tr *ngFor = "let booking of bookings | paginate: { itemsPerPage: count, currentPage: p }">
+                <td>{{booking.source}}</td>
+                <td>{{booking.destination}}</td>
+                <td>{{booking.bookingDate | date:'yyyy/MM/dd'}}</td>
+                <td>{{booking.journeyDate | date:'yyyy/MM/dd'}}</td>
+                <td>{{booking.seatsBooked}}</td>
+                <td>{{booking.bookingCost}}</td>
+            <td>
+                <button (click) = "viewBooking(booking.bookingId)" class = "btn btn-info" style="margin-left: 10px">
+                    <i class="fa-solid fa-eye fa-bounce" style="color: cornflowerblue;"></i> View </button> 
+            </td>
+            </tr>
+        </table>
+          
+          <div class="text-center" style="color: #ffc857;">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div>
+
+           

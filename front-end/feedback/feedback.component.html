@@ -1,0 +1,60 @@
+<div class="card mx-auto">
+  <table>
+    <tr>
+      <td >
+        <label for="flight-rating">Flight Rating</label>
+      </td>
+      <td >
+          <select name="ratings" id="flight-rating" [(ngModel)] = "feedback.flightRating">
+            <option>Select a Flight Rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+      </td>
+    </tr>
+    <tr>
+      <td >
+        <label for="overrall-rating">Overall Rating</label>
+      </td>
+      <td >
+          <select name="ratings" id="overrall-rating" [(ngModel)] = "feedback.overallRating" >
+            <option>Select an Overall Rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+      </td>
+    </tr>
+    <tr>
+      <td >
+        <label for="comment">Comments</label>
+      </td>
+      <td >
+          <textarea name="Comments" id="comment" cols="30" rows="5"
+          [(ngModel)] = "feedback.comments" style="margin-left: 5px;margin-top: 5px;"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="flight">Select a Flight</label>
+      </td>
+      <td>
+        <select name="flightCode" id="flight" [(ngModel)]="selectedFlightIds[i]">
+          <option value="select-Flight">Select Code of Flight</option>
+         <option *ngFor="let flight of flights; let i = index" [value]="flight.recordNumber">
+          {{flight.flightCode}}
+         </option>
+        </select>
+      </td>
+    </tr>
+  </table>
+  <div class="button">
+    <button (click)="signIn()"> Cancel </button>
+    <button (click)="onSubmit(selectedFlightIds[i])"> Send </button>
+  </div>
+</div>

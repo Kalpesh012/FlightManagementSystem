@@ -1,0 +1,54 @@
+.table{
+    align-items: center;
+    text-align: center;
+    color: white;
+  }
+  
+    tr{
+      text-align: center;
+    }
+  
+    th{
+      text-align: center;
+    }
+  
+    .table tr:hover {
+      background-color: #177e89;
+      color: #ffc857;
+     }
+  
+     .buttons{
+      text-align: right;
+      padding: 3px;
+     }
+  
+     h3{
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: #ffc857;
+      margin-top: 35px;
+  }
+
+  .remove-bar{
+    float: right;
+    width: 550px;
+    height: 80px;
+    background-color: #323031;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    border: 2px solid #ffc857;
+    border-radius: 4rem;
+  }
+
+  .submit-button{
+    margin-left: 15px;
+    background-color: #177e89;
+    color: #ffc857;
+    width: 100px;
+    height: 50px;
+    border: 2px solid #ffc857;
+    border-radius: 2rem;
+  }

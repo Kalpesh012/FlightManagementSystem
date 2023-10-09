@@ -1,0 +1,28 @@
+<h3>Feedback List</h3>
+    <table class="table">
+        <tr>
+            <!-- <th> Username </th>
+            <th> Flight </th> -->
+            <th> Flight Rating </th>
+            <th> Overall Rating </th>
+            <th> Comments </th>
+            <th> Actions </th>
+        </tr>
+        <tr *ngFor = "let feedback of feedbacks | paginate: { itemsPerPage: count, currentPage: p }">
+            <!-- <td> {{feedback.userName}} </td>
+            <td> {{feedback.companyOwnerName}} </td> -->
+            <td> {{feedback.flightRating}} </td>
+            <td> {{feedback.overallRating}} </td>
+            <td> {{feedback.comments}} </td>
+            <td >
+                 <button (click)="deleteFeedback(feedback.feedbackId)" class = "btn btn-danger" style="margin-left: 5px;">
+                   <i class="fa-regular fa-trash-can fa-flip" style="color: crimson; ;"></i> Delete </button>
+                 <button (click)="viewFeedback(feedback.feedbackId)" class = "btn btn-info" style="margin-left: 5px;">
+                   <i class="fa-solid fa-eye fa-bounce" style="color: cornflowerblue;"></i> View </button> 
+             </td>
+        </tr>
+    </table>
+      
+      <div class="text-center" style="color: #ffc857">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>

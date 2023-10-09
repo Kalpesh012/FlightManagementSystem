@@ -1,0 +1,38 @@
+.card{
+    width: 350px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #323031;
+    color: #ffc857;
+}
+
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.form-control{
+    border: none;
+    position: relative;
+    background-color: transparent;
+}
+
+.form-group{
+    position: relative;
+    text-align: center;
+}
+
+input{
+    width: 300px;
+    border-radius: 2rem;
+    border: none;
+}
+
+.btn{
+    background-color: #177e89;
+    color: #ffc857;
+}

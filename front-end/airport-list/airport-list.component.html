@@ -1,0 +1,22 @@
+<h3>Airport List</h3>
+<table class="table">
+    <tr>
+        <th>Airport Name</th>
+        <th>City Name</th>
+        <th>Country Name</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor = "let airport of airports | paginate: { itemsPerPage: count, currentPage: p }">
+        <td> {{airport.airportName}} </td>
+        <td> {{airport.cityName}} </td>
+        <td> {{airport.countryName}} </td>
+        <td>
+            <button (click)="viewAirport(airport.airportId)" class = "btn btn-info">
+                <i class="fa-solid fa-eye fa-bounce" style="color: cornflowerblue;"></i> View </button> 
+        </td>
+    </tr>
+</table>
+  
+<div class="text-center" style="color: #ffc857;">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
